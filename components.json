@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "tsx": true,
+  "rsc": true,
+  "tailwind": {
+    "css": "src/app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "ui": "@/components/ds",
+    "lib": "@/lib/ds",
+    "hooks": "@/hooks/ds",
+    "utils": "@/lib/ds/utils"
+  },
+  "registries": {
+    "@ds": "https://ui.highwren.com/r/{name}.json"
+  }
+}

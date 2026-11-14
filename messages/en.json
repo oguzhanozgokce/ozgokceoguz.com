@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Oğuzhan Özgökce · Software Engineer",
+    "description": "Android engineer at Midas. The apps I build with Kotlin, Jetpack Compose and Kotlin Multiplatform, my experience and my writing."
+  },
+  "nav": {
+    "label": "Main menu",
+    "menu": "Menu",
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "stack": "Stack",
+    "writing": "Writing",
+    "contact": "Contact",
+    "skip": "Skip to content"
+  },
+  "appearance": {
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme",
+    "seed": "Accent colour",
+    "language": "Change language"
+  },
+  "seeds": {
+    "kotlin": "Kotlin purple",
+    "android": "Android green",
+    "compose": "Compose blue",
+    "amber": "Amber",
+    "coral": "Coral"
+  },
+  "common": {
+    "newTab": "(opens in a new tab)",
+    "present": "Present",
+    "internship": "Internship"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "cv": "Download CV",
+    "contact": "Get in touch",
+    "now": "Currently",
+    "screenContributions": "contributions",
+    "screenApps": "apps"
+  },
+  "anatomy": {
+    "caption": "Anatomy of an Android app",
+    "view": "View",
+    "preview": "Preview",
+    "layers": "Layers",
+    "ui": "Interface in Jetpack Compose",
+    "presentation": "MVI: intent, ViewModel, state",
+    "domain": "Business rules and use cases",
+    "data": "Local and remote data sources",
+    "step1": "A tap becomes an intent",
+    "step2": "The ViewModel calls a use case",
+    "step3": "The repository fetches the data",
+    "step4": "A new state is emitted",
+    "step5": "The interface recomposes"
+  },
+  "stats": {
+    "label": "In numbers",
+    "contributions": "GitHub contributions in the last 12 months",
+    "years": "years building for Android",
+    "apps": "apps live in the stores",
+    "articles": "technical articles"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "My commit history so far",
+    "lead": "From internships to Midas. Newest commit first."
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "lead": "Apps live in the stores, open source projects and a design system.",
+    "more": "Other work",
+    "playStore": "Google Play",
+    "appStore": "App Store",
+    "github": "GitHub",
+    "website": "Open the site",
+    "android": "Android",
+    "ios": "iOS",
+    "web": "Web",
+    "stars": "{count} stars",
+    "demoAction": "Try the component",
+    "demoNote": "This row is real Highwren components.",
+    "back": "All projects",
+    "gallery": "Screenshots",
+    "openShot": "Enlarge",
+    "stackTitle": "Technologies",
+    "role": "Role",
+    "yearLabel": "Year",
+    "platformLabel": "Platform",
+    "previous": "Previous project",
+    "next": "Next project"
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "title": "The stack, module by module",
+    "lead": "The technologies I use, split into modules as in a Gradle project. Hover a module to see what it depends on."
+  },
+  "github": {
+    "eyebrow": "GitHub",
+    "title": "A year of contributions",
+    "lead": "{count} contributions in the last 12 months. Most of them are in private repositories.",
+    "less": "Less",
+    "more": "More",
+    "languages": "Languages",
+    "profile": "My GitHub profile",
+    "updated": "Updated {date}"
+  },
+  "writing": {
+    "eyebrow": "Writing",
+    "title": "Things I wrote",
+    "lead": "I write up what I learn on Medium.",
+    "minutes": "{count} min read",
+    "all": "All articles on Medium",
+    "inTurkish": "In Turkish"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something together.",
+    "lead": "Write to me about a new project, a collaboration, or just to say hello.",
+    "copy": "Copy email",
+    "cv": "Download CV"
+  },
+  "footer": {
+    "built": "Built with Highwren UI",
+    "source": "Source code",
+    "top": "Back to top"
+  },
+  "lab": {
+    "title": "Lab",
+    "intro": "Where design decisions get tried out: typeface candidates, colour roles, components, motion and the 3D spike.",
+    "type": "Typeface candidates",
+    "typeHint": "Pick a candidate; headings are drawn in that face. Hover the letters or run the wave.",
+    "display": "Display face",
+    "pixel": "Pixel accent",
+    "wave": "Run the wave",
+    "sample": "Android apps in Kotlin that scale",
+    "pangram": "Pijamalı hasta yağız şoföre çabucak güvendi.",
+    "colors": "Colour roles",
+    "components": "Components",
+    "motion": "Motion",
+    "motionHint": "Press a box; each one moves with a different spring.",
+    "scene": "3D spike: laptop",
+    "sceneHint": "The first idea for the hero. The text on the screen is real DOM: change the theme or colour and it changes too.",
+    "primaryAction": "Primary",
+    "secondaryAction": "Secondary",
+    "copy": "Copy email"
+  },
+  "palette": {
+    "open": "Command palette",
+    "placeholder": "Search sections, projects or commands",
+    "empty": "No results",
+    "sections": "Sections",
+    "projects": "Projects",
+    "actions": "Actions",
+    "links": "Links",
+    "copyEmail": "Copy email",
+    "copied": "Copied",
+    "cv": "Download CV"
+  }
+}

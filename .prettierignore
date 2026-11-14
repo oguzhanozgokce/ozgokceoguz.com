@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+public
+package-lock.json
+styles/ds/tokens.css
+styles/seeds.css
+src/lib/ds/icons.tsx
+content/generated
+licenses
+.idea
+*.iml
+.github

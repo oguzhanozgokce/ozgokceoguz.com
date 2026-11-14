@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Oğuzhan Özgökce · Software Engineer",
+    "description": "Midas'ta Android mühendisi. Kotlin, Jetpack Compose ve Kotlin Multiplatform ile geliştirdiğim uygulamalar, deneyimlerim ve yazılarım."
+  },
+  "nav": {
+    "label": "Ana menü",
+    "menu": "Menü",
+    "home": "Ana sayfa",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "stack": "Stack",
+    "writing": "Yazılar",
+    "contact": "İletişim",
+    "skip": "İçeriğe geç"
+  },
+  "appearance": {
+    "toDark": "Koyu temaya geç",
+    "toLight": "Açık temaya geç",
+    "seed": "Vurgu rengi",
+    "language": "Dili değiştir"
+  },
+  "seeds": {
+    "kotlin": "Kotlin moru",
+    "android": "Android yeşili",
+    "compose": "Compose mavisi",
+    "amber": "Kehribar",
+    "coral": "Mercan"
+  },
+  "common": {
+    "newTab": "(yeni sekmede açılır)",
+    "present": "Devam ediyor",
+    "internship": "Staj"
+  },
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "cv": "CV indir",
+    "contact": "İletişime geç",
+    "now": "Şu an",
+    "screenContributions": "katkı",
+    "screenApps": "uygulama"
+  },
+  "anatomy": {
+    "caption": "Bir Android uygulamasının anatomisi",
+    "view": "Görünüm",
+    "preview": "Önizleme",
+    "layers": "Katmanlar",
+    "ui": "Jetpack Compose ile arayüz",
+    "presentation": "MVI: intent, ViewModel, state",
+    "domain": "İş kuralları ve use case’ler",
+    "data": "Yerel ve uzak veri kaynakları",
+    "step1": "Dokunuş bir intent olur",
+    "step2": "ViewModel use case’i çağırır",
+    "step3": "Repository veriyi getirir",
+    "step4": "Yeni state yayınlanır",
+    "step5": "Arayüz yeniden çizilir"
+  },
+  "stats": {
+    "label": "Sayılarla",
+    "contributions": "son 12 ayda GitHub katkısı",
+    "years": "yıldır Android geliştiriyorum",
+    "apps": "mağazada yayında uygulama",
+    "articles": "teknik yazı"
+  },
+  "experience": {
+    "eyebrow": "Deneyim",
+    "title": "Bugüne kadarki commit geçmişim",
+    "lead": "Stajdan Midas’a uzanan yol. En yeni commit en üstte."
+  },
+  "projects": {
+    "eyebrow": "Projeler",
+    "title": "Seçilmiş işler",
+    "lead": "Mağazada yayınlanan uygulamalar, açık kaynak projeler ve bir tasarım sistemi.",
+    "more": "Diğer çalışmalar",
+    "playStore": "Google Play",
+    "appStore": "App Store",
+    "github": "GitHub",
+    "website": "Siteyi aç",
+    "android": "Android",
+    "ios": "iOS",
+    "web": "Web",
+    "stars": "{count} yıldız",
+    "demoAction": "Bileşeni dene",
+    "demoNote": "Bu satır gerçek Highwren bileşenleri.",
+    "back": "Tüm projeler",
+    "gallery": "Ekran görüntüleri",
+    "openShot": "Büyüt",
+    "stackTitle": "Teknolojiler",
+    "role": "Rol",
+    "yearLabel": "Yıl",
+    "platformLabel": "Platform",
+    "previous": "Önceki proje",
+    "next": "Sonraki proje"
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "title": "Modül modül stack",
+    "lead": "Kullandığım teknolojiler, bir Gradle projesindeki gibi modüllere ayrıldı. Bir modülün üzerine gel, bağımlılıklarını gör."
+  },
+  "github": {
+    "eyebrow": "GitHub",
+    "title": "Bir yılın katkıları",
+    "lead": "Son 12 ayda {count} katkı. Çoğu özel repolarda.",
+    "less": "Az",
+    "more": "Çok",
+    "languages": "Dil dağılımı",
+    "profile": "GitHub profilim",
+    "updated": "Güncelleme: {date}"
+  },
+  "writing": {
+    "eyebrow": "Yazılar",
+    "title": "Yazdıklarım",
+    "lead": "Öğrendiklerimi Medium’da yazıyorum.",
+    "minutes": "{count} dk okuma",
+    "all": "Tüm yazılar Medium’da",
+    "inTurkish": "Türkçe"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Birlikte bir şey inşa edelim.",
+    "lead": "Yeni bir proje, iş birliği ya da sadece merhaba demek için yaz.",
+    "copy": "E-postayı kopyala",
+    "cv": "CV indir"
+  },
+  "footer": {
+    "built": "Highwren UI ile yapıldı",
+    "source": "Kaynak kod",
+    "top": "Başa dön"
+  },
+  "lab": {
+    "title": "Lab",
+    "intro": "Tasarım kararlarının denendiği sayfa: yazı tipi adayları, renk rolleri, bileşenler, hareket ve 3D denemesi.",
+    "type": "Yazı tipi adayları",
+    "typeHint": "Bir adayı seç; başlıklar o yüzle çizilir. Harflerin üzerine gel veya dalgayı çalıştır.",
+    "display": "Başlık yüzü",
+    "pixel": "Piksel vurgusu",
+    "wave": "Dalgayı çalıştır",
+    "sample": "Kotlin ile ölçeklenen Android uygulamaları",
+    "pangram": "Pijamalı hasta yağız şoföre çabucak güvendi.",
+    "colors": "Renk rolleri",
+    "components": "Bileşenler",
+    "motion": "Hareket",
+    "motionHint": "Kutuya bas; her biri farklı bir spring ile hareket eder.",
+    "scene": "3D denemesi: dizüstü",
+    "sceneHint": "Hero için ilk fikir. Ekrandaki metin gerçek DOM: temayı veya rengi değiştir, o da değişsin.",
+    "primaryAction": "Birincil",
+    "secondaryAction": "İkincil",
+    "copy": "E-postayı kopyala"
+  },
+  "palette": {
+    "open": "Komut paleti",
+    "placeholder": "Bölüm, proje ya da komut ara",
+    "empty": "Sonuç yok",
+    "sections": "Bölümler",
+    "projects": "Projeler",
+    "actions": "Eylemler",
+    "links": "Bağlantılar",
+    "copyEmail": "E-postayı kopyala",
+    "copied": "Kopyalandı",
+    "cv": "CV indir"
+  }
+}

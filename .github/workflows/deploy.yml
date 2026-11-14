@@ -1,0 +1,117 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag or commit to deploy. Use a release tag to roll back.
+        type: string
+        default: main
+      dry-run:
+        description: List what would change on the server without changing it
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh GitHub numbers
+        run: npm run data:github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+
+      - name: Types, lint, formatting, locales, secrets
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://ozgokceoguz.com' }}
+
+      - name: Assert the site was exported
+        run: |
+          test -f out/index.html
+          test -f out/tr/index.html
+          test -f out/en/index.html
+          test ! -e out/api
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: out/
+          retention-days: 14
+          include-hidden-files: true
+
+  deploy:
+    name: Upload to Hostinger
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: /public_html/
+          dry-run: ${{ inputs.dry-run || false }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            api/**
+
+  release:
+    name: Tag the release
+    needs: deploy
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="v$(date -u +%Y.%m.%d).${{ github.run_number }}"
+          (cd out && zip -qr ../site.zip .)
+          gh release create "$tag" site.zip \
+            --repo "${{ github.repository }}" \
+            --target "${{ github.sha }}" \
+            --title "$tag" \
+            --generate-notes

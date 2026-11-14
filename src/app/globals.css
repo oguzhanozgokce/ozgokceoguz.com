@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+@import '../../styles/ds/theme.css';
+@import '../../styles/seeds.css';
+
+@source '../../content';
+
+@font-face {
+  font-family: 'System Glyphs';
+  src:
+    local('Arial Unicode MS'), local('Segoe UI Symbol'), local('Apple Symbols'),
+    local('Noto Sans Symbols'), local('DejaVu Sans'), local('Roboto');
+  unicode-range: U+2190-21FF, U+2300-23FF, U+25A0-25FF, U+2600-27BF;
+}
+
+@font-face {
+  font-family: 'Flex Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Roboto');
+  font-weight: 100 600;
+  size-adjust: 103%;
+}
+
+@font-face {
+  font-family: 'Flex Fallback';
+  src: local('Arial Bold'), local('Helvetica Neue Bold'), local('Roboto Bold');
+  font-weight: 601 1000;
+  size-adjust: 103%;
+}
+
+@font-face {
+  font-family: 'Flex Display Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Roboto');
+  font-weight: 100 600;
+  size-adjust: 131%;
+}
+
+@font-face {
+  font-family: 'Flex Display Fallback';
+  src: local('Arial Bold'), local('Helvetica Neue Bold'), local('Roboto Bold');
+  font-weight: 601 1000;
+  size-adjust: 131%;
+}
+
+@theme inline {
+  --font-sans:
+    'System Glyphs', var(--font-body), 'Flex Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    'System Glyphs', var(--font-display-face, var(--font-body)), 'Flex Display Fallback',
+    ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-code), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-pixel: var(--font-pixel-face, var(--font-code)), ui-monospace, monospace;
+}
+
+@utility site-width {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 48px);
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 28%, transparent);
+  }
+}
+
+html.theme-switching::view-transition-old(root),
+html.theme-switching::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.theme-switching::view-transition-new(root) {
+  z-index: 1;
+}
+
+@utility hero-enter {
+  animation: hero-enter 900ms var(--ease-fluid) both;
+  animation-delay: calc(var(--enter, 0) * 90ms + 120ms);
+}
+
+@utility hero-settle {
+  animation: hero-settle 900ms var(--ease-fluid) both;
+  animation-delay: calc(var(--enter, 0) * 70ms);
+}
+
+@utility layer-tint-primary {
+  background-color: color-mix(in oklab, var(--primary) 16%, var(--surface-raised));
+  border-color: color-mix(in oklab, var(--primary) 50%, transparent);
+  color: var(--primary);
+}
+
+@utility layer-tint-secondary {
+  background-color: color-mix(in oklab, var(--secondary) 16%, var(--surface-raised));
+  border-color: color-mix(in oklab, var(--secondary) 50%, transparent);
+  color: var(--secondary);
+}
+
+@utility layer-tint-tertiary {
+  background-color: color-mix(in oklab, var(--tertiary) 16%, var(--surface-raised));
+  border-color: color-mix(in oklab, var(--tertiary) 50%, transparent);
+  color: var(--tertiary);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+}
+
+@keyframes hero-settle {
+  from {
+    transform: translateY(1.1rem);
+  }
+}
+
+@layer components {
+  .heat-cell {
+    aspect-ratio: 1;
+    border-radius: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .heat-cell {
+      opacity: 0;
+      scale: 0.5;
+      transition:
+        opacity 500ms var(--ease-fluid) var(--delay, 0ms),
+        scale 500ms var(--ease-fluid) var(--delay, 0ms);
+    }
+
+    .heat-map[data-visible='true'] .heat-cell {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+::view-transition-group(.morph) {
+  animation-duration: 440ms;
+  animation-timing-function: var(--ease-fluid);
+}
+
+::view-transition-old(.page-out) {
+  animation: 140ms ease-out both page-fade reverse;
+}
+
+::view-transition-new(.page-in) {
+  animation:
+    260ms ease-out 110ms both page-fade,
+    460ms var(--ease-fluid) both page-rise;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes page-rise {
+  from {
+    transform: translateY(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

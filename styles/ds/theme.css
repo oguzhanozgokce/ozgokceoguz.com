@@ -1,0 +1,475 @@
+@import './tokens.css';
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-surface-tint: var(--surface-tint);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-scrim: var(--scrim);
+  --color-shadow: var(--shadow);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
+  --color-success: var(--success);
+  --color-on-success: var(--on-success);
+  --color-success-container: var(--success-container);
+  --color-on-success-container: var(--on-success-container);
+  --color-warning: var(--warning);
+  --color-on-warning: var(--on-warning);
+  --color-warning-container: var(--warning-container);
+  --color-on-warning-container: var(--on-warning-container);
+  --color-info: var(--info);
+  --color-on-info: var(--on-info);
+  --color-info-container: var(--info-container);
+  --color-on-info-container: var(--on-info-container);
+
+  --color-canvas: var(--canvas);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-surface-segment: var(--surface-segment);
+  --color-surface-thumb: var(--surface-thumb);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+
+  --color-primary-solid: var(--primary-solid);
+  --color-on-primary-solid: var(--on-primary-solid);
+  --color-primary-solid-hover: color-mix(
+    in oklab,
+    var(--primary-solid) 90%,
+    var(--on-primary-solid)
+  );
+  --color-error-solid: var(--error-solid);
+  --color-on-error-solid: var(--on-error-solid);
+  --color-error-solid-hover: color-mix(in oklab, var(--error-solid) 90%, var(--on-error-solid));
+  --color-success-solid: var(--success-solid);
+  --color-on-success-solid: var(--on-success-solid);
+  --color-success-solid-hover: color-mix(
+    in oklab,
+    var(--success-solid) 90%,
+    var(--on-success-solid)
+  );
+  --color-warning-solid: var(--warning-solid);
+  --color-on-warning-solid: var(--on-warning-solid);
+  --color-warning-solid-hover: color-mix(
+    in oklab,
+    var(--warning-solid) 90%,
+    var(--on-warning-solid)
+  );
+  --color-info-solid: var(--info-solid);
+  --color-on-info-solid: var(--on-info-solid);
+  --color-info-solid-hover: color-mix(in oklab, var(--info-solid) 90%, var(--on-info-solid));
+  --color-inverse-surface-hover: color-mix(
+    in oklab,
+    var(--inverse-surface) 90%,
+    var(--inverse-on-surface)
+  );
+  --color-surface-overlay-hover: color-mix(in oklab, var(--surface-overlay) 94%, var(--on-surface));
+  --color-primary-soft: color-mix(in oklab, var(--primary) 12%, transparent);
+  --color-primary-soft-hover: color-mix(in oklab, var(--primary) 16%, transparent);
+  --color-on-primary-soft: var(--primary);
+  --color-error-soft: color-mix(in oklab, var(--error) 12%, transparent);
+  --color-error-soft-hover: color-mix(in oklab, var(--error) 16%, transparent);
+  --color-on-error-soft: var(--error);
+  --color-success-soft: color-mix(in oklab, var(--success) 12%, transparent);
+  --color-success-soft-hover: color-mix(in oklab, var(--success) 16%, transparent);
+  --color-on-success-soft: var(--success);
+  --color-warning-soft: color-mix(in oklab, var(--warning) 12%, transparent);
+  --color-warning-soft-hover: color-mix(in oklab, var(--warning) 16%, transparent);
+  --color-on-warning-soft: var(--warning);
+  --color-info-soft: color-mix(in oklab, var(--info) 12%, transparent);
+  --color-info-soft-hover: color-mix(in oklab, var(--info) 16%, transparent);
+  --color-on-info-soft: var(--info);
+  --color-neutral-soft: light-dark(
+    color-mix(in srgb, var(--on-surface) 6%, transparent),
+    color-mix(in srgb, var(--on-surface) 10%, transparent)
+  );
+  --color-neutral-soft-hover: light-dark(
+    color-mix(in srgb, var(--on-surface) 10%, transparent),
+    color-mix(in srgb, var(--on-surface) 14%, transparent)
+  );
+  --color-outline-subtle: light-dark(
+    color-mix(in srgb, var(--on-surface) 8%, transparent),
+    color-mix(in srgb, var(--on-surface) 10%, transparent)
+  );
+  --color-backdrop: light-dark(
+    color-mix(in srgb, var(--scrim) 40%, transparent),
+    color-mix(in srgb, var(--scrim) 60%, transparent)
+  );
+
+  --shadow-xs:
+    0 2px 4px 0 light-dark(color-mix(in srgb, var(--shadow) 4%, transparent), transparent),
+    0 1px 2px 0 light-dark(color-mix(in srgb, var(--shadow) 6%, transparent), transparent),
+    0 0 1px 0 light-dark(color-mix(in srgb, var(--shadow) 6%, transparent), transparent);
+  --shadow-sm:
+    0 2px 4px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 5%, transparent),
+        color-mix(in srgb, var(--shadow) 25%, transparent)
+      ),
+    0 4px 8px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 10%, transparent),
+        color-mix(in srgb, var(--shadow) 40%, transparent)
+      ),
+    inset 0 0 0 1px light-dark(transparent, color-mix(in srgb, var(--on-surface) 8%, transparent));
+  --shadow-md:
+    0 2px 8px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 6%, transparent),
+        color-mix(in srgb, var(--shadow) 35%, transparent)
+      ),
+    0 -6px 12px 0 light-dark(color-mix(in srgb, var(--shadow) 3%, transparent), transparent),
+    0 14px 28px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 8%, transparent),
+        color-mix(in srgb, var(--shadow) 50%, transparent)
+      ),
+    inset 0 0 0 1px light-dark(transparent, color-mix(in srgb, var(--on-surface) 12%, transparent));
+  --shadow-lg:
+    0 4px 6px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 10%, transparent),
+        color-mix(in srgb, var(--shadow) 50%, transparent)
+      ),
+    0 12px 24px 0
+      light-dark(
+        color-mix(in srgb, var(--shadow) 15%, transparent),
+        color-mix(in srgb, var(--shadow) 70%, transparent)
+      ),
+    inset 0 0 0 1px light-dark(transparent, color-mix(in srgb, var(--on-surface) 15%, transparent));
+}
+
+@theme {
+  --radius-control: 9999px;
+  --radius-field: 0.75rem;
+  --radius-item: 0.75rem;
+  --radius-overlay: 1rem;
+  --radius-container: 1.25rem;
+  --radius-dialog: 1.5rem;
+
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --animate-ds-spin: ds-spin 0.75s linear infinite;
+  --animate-ds-shimmer: ds-shimmer 2s linear infinite;
+  --animate-ds-pulse: ds-pulse 1.8s ease-in-out infinite;
+  --animate-ds-fade-in-delayed: ds-fade-in 150ms ease-out 300ms both;
+  --animate-ds-fade-in: ds-fade-in 150ms ease-out both;
+  --animate-ds-fade-out: ds-fade-out 100ms ease-out both;
+  --animate-ds-popover-in: ds-popover-in 150ms ease both;
+  --animate-ds-popover-out: ds-popover-out 100ms ease both;
+  --animate-ds-popover-morph-in: ds-popover-morph-in 250ms var(--ease-fluid) both;
+  --animate-ds-popover-morph-out: ds-popover-morph-out 150ms var(--ease-out-quad) both;
+  --animate-ds-popover-presence-in: ds-fade-in 250ms var(--ease-fluid) both;
+  --animate-ds-popover-presence-out: ds-fade-out 150ms var(--ease-out-quad) both;
+  --animate-ds-popover-content-in: ds-popover-content-in 250ms var(--ease-fluid) both;
+  --animate-ds-dialog-in: ds-dialog-in 250ms var(--ease-out-quad) both;
+  --animate-ds-dialog-out: ds-dialog-out 100ms ease both;
+  --animate-ds-sheet-in-bottom: ds-sheet-in-bottom 250ms var(--ease-fluid) both;
+  --animate-ds-sheet-out-bottom: ds-sheet-out-bottom 200ms var(--ease-fluid) both;
+  --animate-ds-sheet-in-top: ds-sheet-in-top 250ms var(--ease-fluid) both;
+  --animate-ds-sheet-out-top: ds-sheet-out-top 200ms var(--ease-fluid) both;
+  --animate-ds-sheet-in-end: ds-sheet-in-end 250ms var(--ease-fluid) both;
+  --animate-ds-sheet-out-end: ds-sheet-out-end 200ms var(--ease-fluid) both;
+  --animate-ds-sheet-in-start: ds-sheet-in-start 250ms var(--ease-fluid) both;
+  --animate-ds-sheet-out-start: ds-sheet-out-start 200ms var(--ease-fluid) both;
+  --animate-ds-toast-in: ds-toast-in 350ms var(--ease-fluid) both;
+  --animate-ds-toast-out: ds-fade-out 250ms var(--ease-fluid) both;
+
+  @keyframes ds-fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes ds-fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes ds-popover-in {
+    from {
+      opacity: 0;
+      scale: var(--ds-popover-scale, 0.95);
+      translate: var(--ds-popover-offset, 0 0);
+    }
+  }
+
+  @keyframes ds-popover-out {
+    to {
+      opacity: 0;
+      scale: 0.95;
+    }
+  }
+
+  @keyframes ds-popover-morph-in {
+    from {
+      opacity: 0;
+      transform: scale(0.35, 0.12);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes ds-popover-morph-out {
+    to {
+      opacity: 0;
+      transform: scale(0.7, 0.2);
+    }
+  }
+
+  @keyframes ds-popover-content-in {
+    0%,
+    20% {
+      opacity: 0;
+      translate: var(--ds-popover-offset, 0 0);
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  @keyframes ds-dialog-in {
+    from {
+      opacity: 0;
+      scale: 1.05;
+      translate: 0 var(--ds-dialog-rise, 0);
+    }
+  }
+
+  @keyframes ds-dialog-out {
+    to {
+      opacity: 0;
+      scale: 0.95;
+    }
+  }
+
+  @keyframes ds-sheet-in-bottom {
+    from {
+      translate: 0 100%;
+    }
+  }
+
+  @keyframes ds-sheet-out-bottom {
+    to {
+      translate: 0 100%;
+    }
+  }
+
+  @keyframes ds-sheet-in-top {
+    from {
+      translate: 0 -100%;
+    }
+  }
+
+  @keyframes ds-sheet-out-top {
+    to {
+      translate: 0 -100%;
+    }
+  }
+
+  @keyframes ds-sheet-in-end {
+    from {
+      translate: calc(var(--ds-direction, 1) * 100%) 0;
+    }
+  }
+
+  @keyframes ds-sheet-out-end {
+    to {
+      translate: calc(var(--ds-direction, 1) * 100%) 0;
+    }
+  }
+
+  @keyframes ds-sheet-in-start {
+    from {
+      translate: calc(var(--ds-direction, 1) * -100%) 0;
+    }
+  }
+
+  @keyframes ds-sheet-out-start {
+    to {
+      translate: calc(var(--ds-direction, 1) * -100%) 0;
+    }
+  }
+
+  @keyframes ds-toast-in {
+    from {
+      opacity: 0;
+      translate: 0 1rem;
+    }
+  }
+
+  @keyframes ds-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes ds-shimmer {
+    from {
+      translate: calc(var(--ds-direction, 1) * -100%) 0;
+    }
+    to {
+      translate: calc(var(--ds-direction, 1) * 100%) 0;
+    }
+  }
+
+  @keyframes ds-pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+@utility focus-ring {
+  outline: 0 solid transparent;
+  outline-offset: 2px;
+
+  &:where([data-focus-visible], :focus-visible) {
+    outline: 2px solid var(--focus-color, var(--primary));
+  }
+}
+
+@utility focus-ring-inset {
+  outline: 0 solid transparent;
+  outline-offset: -2px;
+
+  &:where([data-focus-visible], :focus-visible) {
+    outline: 2px solid var(--focus-color, var(--primary));
+  }
+}
+
+@utility transition-control {
+  transition-property: scale, background-color, color, border-color, box-shadow, opacity;
+  transition-duration: 250ms, 100ms, 100ms, 100ms, 100ms, 150ms;
+  transition-timing-function:
+    ease, var(--ease-out), var(--ease-out), var(--ease-out), var(--ease-out), var(--ease-out);
+}
+
+@utility no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@utility tabular-digits {
+  font-variant-numeric: tabular-nums;
+}
+
+@custom-variant motion-productive (&:where([data-motion-profile='productive'] *));
+
+@scope ([data-ds-motion='reduced']) to ([data-ds-motion]) {
+  [data-pressed] {
+    scale: 1 !important;
+  }
+
+  [data-entering] {
+    animation-name: ds-fade-in !important;
+  }
+
+  [data-exiting] {
+    animation-name: ds-fade-out !important;
+  }
+}
+
+@scope ([data-ds-motion='disabled']) to ([data-ds-motion]) {
+  [data-pressed] {
+    scale: 1 !important;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@layer base {
+  [dir='rtl'] {
+    --ds-direction: -1;
+  }
+
+  [dir='ltr'] {
+    --ds-direction: 1;
+  }
+
+  [data-placement='top'] {
+    --ds-popover-offset: 0 0.25rem;
+  }
+
+  [data-placement='bottom'] {
+    --ds-popover-offset: 0 -0.25rem;
+  }
+
+  [data-placement='left'] {
+    --ds-popover-offset: 0.25rem 0;
+  }
+
+  [data-placement='right'] {
+    --ds-popover-offset: -0.25rem 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-entering] {
+      animation-name: ds-fade-in !important;
+    }
+
+    [data-exiting] {
+      animation-name: ds-fade-out !important;
+    }
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--ds-duration-effect-slow);
+}
