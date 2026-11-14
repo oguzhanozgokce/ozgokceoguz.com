@@ -59,7 +59,7 @@ jobs:
           test -f out/en/index.html
           test ! -e out/api
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site
           path: out/
